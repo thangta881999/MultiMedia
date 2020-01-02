@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundapp"
+
+    >
+
+    <TextView
+        android:id="@+id/textviewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:padding="5dp"
+        android:text="Tên bài hát"
+        android:textColor="#6D1212"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:background="@null"
+        android:id="@+id/imgbtnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="122dp"
+        android:layout_marginLeft="122dp"
+        android:layout_marginBottom="67dp"
+        android:layout_toRightOf="@id/imgbtnPre"
+        android:src="@drawable/play" />
+
+    <ImageButton
+        android:background="@null"
+        android:id="@+id/imgbtnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="217dp"
+        android:layout_marginLeft="217dp"
+        android:layout_marginBottom="68dp"
+        android:layout_toRightOf="@id/imgbtnPlay"
+        android:src="@drawable/stop" />
+
+    <ImageButton
+        android:background="@null"
+        android:id="@+id/imgbtnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="319dp"
+        android:layout_marginLeft="319dp"
+        android:layout_marginBottom="60dp"
+        android:layout_toRightOf="@id/imgbtnStop"
+        android:src="@drawable/next" />
+
+    <ImageButton
+        android:background="@null"
+        android:id="@+id/imgbtnPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="69dp"
+        android:src="@drawable/pre" />
+
+    <SeekBar
+        android:id="@+id/seekBarSong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="13dp"
+        android:layout_above="@+id/imgbtnPre"
+        />
+
+    <TextView
+        android:id="@+id/txtTimeSongTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarSong"
+        android:layout_alignStart="@+id/seekBarSong"
+        android:layout_alignLeft="@+id/seekBarSong"
+        android:layout_marginStart="292dp"
+        android:layout_marginLeft="292dp"
+        android:layout_marginBottom="7dp"
+        android:text="00:00"
+        android:textColor="#BD1717"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtTimeSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarSong"
+        android:layout_alignStart="@+id/seekBarSong"
+        android:layout_alignLeft="@+id/seekBarSong"
+        android:layout_marginBottom="12dp"
+        android:text="00:00"
+        android:textColor="#BD1717"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageViewDisc"
+        android:layout_width="172dp"
+        android:layout_height="283dp"
+        android:layout_above="@+id/txtTimeSongTotal"
+        android:layout_below="@+id/textviewTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="-39dp"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginRight="-3dp"
+        android:layout_marginBottom="102dp"
+        android:layout_toEndOf="@+id/lvMusic"
+        android:layout_toRightOf="@+id/lvMusic"
+        app:srcCompat="@drawable/compactdisc" />
+
+    <ListView
+        android:id="@+id/lvMusic"
+        android:layout_width="203dp"
+        android:layout_height="294dp"
+        android:layout_below="@+id/textviewTitle"
+        android:layout_marginTop="3dp" />
+
+
+</RelativeLayout>

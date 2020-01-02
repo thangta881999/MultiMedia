@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/repeat_no"
+    android:background="#250179"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/frameContent"
+        android:layout_width="match_parent"
+        android:layout_height="544dp"
+        android:layout_below="@+id/btnYoutube"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp">
+
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnMusic"
+        android:layout_width="30dp"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-6dp"
+        android:background="@drawable/music"
+        android:onClick="AddFragment" />
+
+    <Button
+        android:id="@+id/btnYoutube"
+        android:layout_width="30dp"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="-6dp"
+        android:layout_toEndOf="@+id/btnMusic"
+        android:layout_toRightOf="@+id/btnMusic"
+        android:background="@drawable/youtube"
+        android:onClick="AddFragment" />
+    <Button
+        android:id="@+id/btnMovie"
+        android:layout_width="30dp"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="-6dp"
+        android:layout_toEndOf="@+id/btnYoutube"
+        android:layout_toRightOf="@+id/btnYoutube"
+        android:background="@drawable/movie"
+        android:onClick="AddFragment" />
+    <Button
+        android:id="@+id/btnTV"
+        android:layout_width="30dp"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="-6dp"
+        android:layout_toEndOf="@+id/btnMovie"
+        android:layout_toRightOf="@+id/btnMovie"
+        android:background="@drawable/tivi"
+        android:onClick="AddFragment" />
+
+    <!--<ListView-->
+        <!--android:id="@+id/lvYtb"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="504dp"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginStart="0dp"-->
+        <!--android:layout_marginLeft="0dp"-->
+        <!--android:layout_marginBottom="-5dp" />-->
+
+
+
+
+</RelativeLayout>
