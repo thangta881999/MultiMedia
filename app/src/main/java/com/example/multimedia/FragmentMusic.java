@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -26,7 +27,8 @@ public class FragmentMusic extends Fragment {
     TextView txtTitle, txtTimeSong, txtTimeTotal;
     SeekBar skSong;
     ImageView imgHinh;
-    ImageButton btnPre, btnPlay, btnStop, btnNext;
+    ImageButton btnPre, btnPlay/*, btnStop*/, btnNext;
+    ImageButton btnListSong;
     ArrayList<Song> arraySong;
     int position=0;
     MediaPlayer mediaPlayer;
@@ -34,10 +36,11 @@ public class FragmentMusic extends Fragment {
     ListView lvSong;
     SongAdapter adapter;
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.music,container,false);
+        final View view = inflater.inflate(R.layout.music,container,false);
         //Anh xa
         imgHinh = (ImageView) view.findViewById(R.id.imageViewDisc);
         txtTimeSong= (TextView) view.findViewById(R.id.txtTimeSong);
@@ -46,12 +49,14 @@ public class FragmentMusic extends Fragment {
         skSong = (SeekBar) view.findViewById(R.id.seekBarSong);
         btnPre = (ImageButton) view.findViewById(R.id.imgbtnPre);
         btnPlay = (ImageButton) view.findViewById(R.id.imgbtnPlay);
-        btnStop = (ImageButton) view.findViewById(R.id.imgbtnStop);
+        //btnStop = (ImageButton) view.findViewById(R.id.imgbtnStop);
         btnNext = (ImageButton) view.findViewById(R.id.imgbtnNext);
         lvSong = (ListView) view.findViewById(R.id.lvMusic);
         arraySong= new ArrayList<>();
         adapter= new SongAdapter(getActivity(),R.layout.row_music,arraySong);
         lvSong.setAdapter(adapter);
+        btnListSong = (ImageButton) view.findViewById((R.id.BtnListSong));
+
         //
         AnhXa();
         AddSong();
@@ -87,11 +92,28 @@ public class FragmentMusic extends Fragment {
                     mediaPlayer.stop();
                 }
                 KhoiTaoMediPlayer();
-
+                //imgHinh.setImageResource(R.drawable.);
+                txtTitle.setVisibility(view.VISIBLE);
                 mediaPlayer.start();
-                btnPlay.setImageResource(R.drawable.pause);
+                btnPlay.setImageResource(R.drawable.ic_pause_circle_filled_black_35dp);
                 SetTimeTotal();
                 UpdateTimeSong();
+                lvSong.setVisibility((View.INVISIBLE));
+                imgHinh.startAnimation(animation);
+            }
+        });
+        /*if(mediaPlayer.isPlaying()) {
+            btnPlay.setImageResource(R.drawable.pause);
+        }else {
+            btnPlay.setImageResource(R.drawable.play);
+        }*/
+        btnListSong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lvSong.setVisibility((View.VISIBLE));
+                imgHinh.setVisibility(View.INVISIBLE);
+                txtTitle.setVisibility(view.INVISIBLE);
+                imgHinh.clearAnimation();
             }
         });
         btnPre.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +132,7 @@ public class FragmentMusic extends Fragment {
                 KhoiTaoMediPlayer();
 
                 mediaPlayer.start();
-                btnPlay.setImageResource(R.drawable.pause);
+                btnPlay.setImageResource(R.drawable.ic_pause_circle_filled_black_35dp);
                 SetTimeTotal();
                 UpdateTimeSong();
             }
@@ -131,12 +153,12 @@ public class FragmentMusic extends Fragment {
                 KhoiTaoMediPlayer();
 
                 mediaPlayer.start();
-                btnPlay.setImageResource(R.drawable.pause);
+                btnPlay.setImageResource(R.drawable.ic_pause_circle_filled_black_35dp);
                 SetTimeTotal();
                 UpdateTimeSong();
             }
         });
-        btnStop.setOnClickListener(new View.OnClickListener() {
+        /*btnStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mediaPlayer.stop();
@@ -144,23 +166,30 @@ public class FragmentMusic extends Fragment {
                 btnPlay.setImageResource(R.drawable.play);
                 KhoiTaoMediPlayer();
             }
-        });
+        });*/
+
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mediaPlayer.isPlaying())
                 {
                     mediaPlayer.pause();
-                    btnPlay.setImageResource(R.drawable.play);
+                    imgHinh.getAnimation().cancel();
+                    imgHinh.clearAnimation();
+                    animation.setAnimationListener(null);
+                    btnPlay.setImageResource(R.drawable.ic_play_circle_filled_black_35dp);
                 }
                 else
                 {
                     mediaPlayer.start();
-                    btnPlay.setImageResource(R.drawable.pause);
+                    btnPlay.setImageResource(R.drawable.ic_pause_circle_filled_black_35dp);
+                    imgHinh.startAnimation(animation);
                 }
                 SetTimeTotal();
                 UpdateTimeSong();
-                imgHinh.startAnimation(animation);
+
+
+
             }
         });
         return view;
@@ -193,7 +222,7 @@ public class FragmentMusic extends Fragment {
                         KhoiTaoMediPlayer();
 
                         mediaPlayer.start();
-                        btnPlay.setImageResource(R.drawable.pause);
+                        btnPlay.setImageResource(R.drawable.ic_pause_circle_filled_black_35dp);
                         SetTimeTotal();
                         UpdateTimeSong();
                     }
@@ -202,6 +231,7 @@ public class FragmentMusic extends Fragment {
             }
         },100);
     }
+
     private  void SetTimeTotal()
     {
         SimpleDateFormat dinhDangGio = new SimpleDateFormat("mm:ss");

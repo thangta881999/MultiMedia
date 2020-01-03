@@ -7,34 +7,7 @@
 
     >
 
-    <TextView
-        android:id="@+id/textviewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:padding="5dp"
-        android:text="Tên bài hát"
-        android:textColor="#6D1212"
-        android:textSize="20sp" />
-
-    <ImageButton
-        android:background="@null"
-        android:id="@+id/imgbtnPlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="122dp"
-        android:layout_marginLeft="122dp"
-        android:layout_marginBottom="67dp"
-        android:layout_toRightOf="@id/imgbtnPre"
-        android:src="@drawable/play" />
-
-    <ImageButton
+    <!--<ImageButton
         android:background="@null"
         android:id="@+id/imgbtnStop"
         android:layout_width="wrap_content"
@@ -46,97 +19,175 @@
         android:layout_marginLeft="217dp"
         android:layout_marginBottom="68dp"
         android:layout_toRightOf="@id/imgbtnPlay"
-        android:src="@drawable/stop" />
+        android:src="@drawable/stop" />-->
 
-    <ImageButton
-        android:background="@null"
-        android:id="@+id/imgbtnNext"
-        android:layout_width="wrap_content"
+    <!--android:layout_toRightOf="@id/imgbtnStop"-->
+    <!--
+
+        <ImageButton
+            android:id="@+id/imgbtnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="101dp"
+            android:layout_marginLeft="101dp"
+            android:layout_marginBottom="30dp"
+            android:layout_toEndOf="@+id/imgbtnPre"
+            android:layout_toRightOf="@+id/imgbtnPre"
+            android:background="@null"
+            android:src="@drawable/ic_play_circle_filled_black_35dp" />
+
+        <ImageButton
+            android:id="@+id/imgbtnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginBottom="30dp"
+            android:layout_toEndOf="@+id/imgbtnPlay"
+            android:layout_toRightOf="@+id/imgbtnPlay"
+            android:background="@null"
+            android:src="@drawable/ic_skip_next_black_35dp" />
+
+        <ImageButton
+            android:id="@+id/imgbtnPre"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_skip_previous_black_35dp" />
+    -->
+
+    <TextView
+        android:id="@+id/textviewTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="319dp"
-        android:layout_marginLeft="319dp"
-        android:layout_marginBottom="60dp"
-        android:layout_toRightOf="@id/imgbtnStop"
-        android:src="@drawable/next" />
-
-    <ImageButton
-        android:background="@null"
-        android:id="@+id/imgbtnPre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginBottom="69dp"
-        android:src="@drawable/pre" />
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="350dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Tên bài hát"
+        android:textColor="#6D1212"
+        android:textSize="20sp" />
 
     <SeekBar
         android:id="@+id/seekBarSong"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="13dp"
-        android:layout_above="@+id/imgbtnPre"
-        />
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:id="@+id/txtTimeSongTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/seekBarSong"
-        android:layout_alignStart="@+id/seekBarSong"
-        android:layout_alignLeft="@+id/seekBarSong"
-        android:layout_marginStart="292dp"
-        android:layout_marginLeft="292dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="460dp"
         android:text="00:00"
         android:textColor="#BD1717"
-        android:textSize="30sp" />
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/txtTimeSong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/seekBarSong"
-        android:layout_alignStart="@+id/seekBarSong"
-        android:layout_alignLeft="@+id/seekBarSong"
+        android:layout_marginTop="460dp"
         android:layout_marginBottom="12dp"
+        android:layout_marginRight="5dp"
         android:text="00:00"
         android:textColor="#BD1717"
-        android:textSize="30sp" />
+        android:textSize="20dp" />
 
-    <ImageView
-        android:id="@+id/imageViewDisc"
-        android:layout_width="172dp"
-        android:layout_height="283dp"
-        android:layout_above="@+id/txtTimeSongTotal"
-        android:layout_below="@+id/textviewTitle"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="-39dp"
-        android:layout_marginEnd="-3dp"
-        android:layout_marginRight="-3dp"
-        android:layout_marginBottom="102dp"
-        android:layout_toEndOf="@+id/lvMusic"
-        android:layout_toRightOf="@+id/lvMusic"
-        app:srcCompat="@drawable/compactdisc" />
 
     <ListView
         android:id="@+id/lvMusic"
-        android:layout_width="203dp"
+        android:layout_width="350dp"
         android:layout_height="294dp"
-        android:layout_below="@+id/textviewTitle"
-        android:layout_marginTop="3dp" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="326dp"
+        android:visibility="invisible" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewDisc"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="121dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="118dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/play"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+
+    <ImageButton
+        android:id="@+id/BtnListSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginTop="400dp"
+        android:onClick="btnListSongClicked"
+        android:src="@drawable/ic_playlist_play_black_24dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/linebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="500dp"
+        android:orientation="horizontal"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+
+        android:weightSum="5">
+
+        <ImageButton
+            android:id="@+id/imgbtnPre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@null"
+            android:src="@drawable/ic_skip_previous_black_35dp" />
+
+        <ImageButton
+            android:id="@+id/imgbtnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/ic_play_circle_filled_black_35dp" />
+
+        <ImageButton
+            android:id="@+id/imgbtnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@null"
+            android:src="@drawable/ic_skip_next_black_35dp" />
+    </LinearLayout>
 
 
 </RelativeLayout>

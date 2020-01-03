@@ -54,6 +54,7 @@ public class SongAdapter  extends BaseAdapter {
         else {
             holder = (ViewHolder) view.getTag();
         }
+
         Song song = songList.get(position);
 
         holder.txtTitle.setText(song.getTitle());
