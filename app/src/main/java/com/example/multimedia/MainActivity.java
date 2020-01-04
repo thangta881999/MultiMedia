@@ -19,7 +19,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-TextView txtLabel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +26,6 @@ TextView txtLabel;
         BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentMusic()).commit();
         bottomNav.setOnNavigationItemSelectedListener(navListener);
-
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =

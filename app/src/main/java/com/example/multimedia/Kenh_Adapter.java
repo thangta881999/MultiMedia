@@ -66,11 +66,11 @@ public class Kenh_Adapter extends BaseAdapter {
 
         // anh xa view
         ImageView imgKenh = (ImageView) convertView.findViewById(R.id.img);
-        TextView txtKenh = (TextView) convertView.findViewById(R.id.textViewKenh);
+        //TextView txtKenh = (TextView) convertView.findViewById(R.id.textViewKenh);
 
         // gan gia tri
         Kenh a = kenhList.get(position);
-        txtKenh.setText(a.getTenKenh());
+        //txtKenh.setText(a.getTenKenh());
         imgKenh.setImageResource(a.getHinh());
 
         return convertView;

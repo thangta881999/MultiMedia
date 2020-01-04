@@ -24,7 +24,6 @@ import androidx.fragment.app.Fragment;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 public class FragmentTivi1 extends Fragment {
-    TextView txtDanhSach;
     ListView lvKenh;
     ArrayList<Kenh> arrKenh;
     Kenh_Adapter adapterKenh;

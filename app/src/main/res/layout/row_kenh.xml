@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-   >
+    android:layout_height="match_parent">
+
     <ImageView
-
         android:id="@+id/img"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-
-        ></ImageView>
-
-    <TextView
-        android:id="@+id/textViewKenh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/img"
-        android:textColor="#000"
-        android:text="Tên kênh"
-        android:textSize="25dp"></TextView>
+        android:background="#FFFF" />
+
 </RelativeLayout>
